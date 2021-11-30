@@ -1,37 +1,56 @@
-## Welcome to GitHub Pages
+## Welcome to Grilled Robin
 
-You can use the [editor on GitHub](https://github.com/GrilledRobin/GrilledRobin.github.io/edit/main/index.md) to maintain and preview the content for your website in Markdown files.
+<!-- https://stackoverflow.com/questions/1705895/python-markdown-markdown-inside-html-blocks -->
+<table border="0" width="100%">
+  <tr>
+    <td width="80%">
+      <h3>Robin Lu</h3>
+      <p><b>VP @ Foreign Bank</b></p>
+      <p><b>Data Structure, Visualization, Business Intelligence, Analytics, RPA</b></p>
+      <p markdown="1">:gem: <b>SAS</b>, <b>Python</b>, <b>R</b>, <b>Power BI</b></p>
+    </td>
+    <td width="20%" align="center">
+      <img src="assets/images/photo.jpg" width="50%">
+    </td>
+  </tr>
+</table>
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### News
 
-### Markdown
+- [ ] `2021-11-28` Setup my personal homepage
+- [ ] `2021-11-28` Upgrade `shiny` module [`UM_custPortMgmt`](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/UsrShinyModules/Ops/UM_custPortMgmt.r) to support `R 4.1.1` and [`echarts4r 0.4.1`](https://echarts4r.john-coene.com/)
+- [x] `2021-11-26` Add function [`setForegroundWindow`](https://github.com/GrilledRobin/omni-series/blob/master/Python/omniPy/RPA/setForegroundWindow.py) to set the dedicated window to the fore-ground in the sub-module `RPA` of [`Python` branch](https://github.com/GrilledRobin/omni-series/tree/master/Python/omniPy).
+- [x] `2021-11-23` Correct the datetime part in functions `intnx` \([`R` version](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/Dates/intnx.r), [`Python` version](https://github.com/GrilledRobin/omni-series/blob/master/Python/omniPy/Dates/intnx.py) \) and `intck` \([`R` version](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/Dates/intck.r), [`Python` version](https://github.com/GrilledRobin/omni-series/blob/master/Python/omniPy/Dates/intck.py) \) in the sub-module `Dates` of both [`R` branch](https://github.com/GrilledRobin/omni-series/tree/master/R/omniR) and [`Python` branch](https://github.com/GrilledRobin/omni-series/tree/master/Python/omniPy).
+- [x] `2021-11-21` Introduce program templates to utilize all my packages \(currently available as source codes\) designed as omni-series for easy reference. [`R` version](https://github.com/GrilledRobin/omni-series/tree/master/R/Programs), [`Python` version](https://github.com/GrilledRobin/omni-series/tree/master/Python/Programs)
+- [x] `2021-11-07` Add function `winKnownFolders` \([`Python` version](https://github.com/GrilledRobin/omni-series/blob/master/Python/omniPy/FileSystem/winKnownFolders.py) \) to simulate the function [`SHGetKnownFolderPath`](https://docs.microsoft.com/en-us/windows/win32/api/shlobj_core/nf-shlobj_core-shgetknownfolderpath) in `C#`, with helper function `getMSDNKnownFolderIDDoc` \([`Python` version](https://github.com/GrilledRobin/omni-series/blob/master/Python/omniPy/FileSystem/getMSDNKnownFolderIDDoc.py) \) to scrape the maping table from MSDN.
+- [x] `2021-10-17` Upgrade `shiny` module [`UM_JointPlots`](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/UsrShinyModules/Stats/UM_JointPlots.r) to support `R 4.1.1` and [`echarts4r 0.4.1`](https://echarts4r.john-coene.com/), demo snapshot for the module is [here](assets/images/demo_UM_JointPlots.png)
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+### Gallery
 
-```markdown
-Syntax highlighted code block
+Some of my projects are demonstrated in this section
 
-# Header 1
-## Header 2
-### Header 3
+#### Customizable RFM
 
-- Bulleted
-- List
+`RFM` \(Recency-Frequency-Monetary\) model is a classic stats model to classify the customers in terms of the transactions that are conducted on different time spans and monetary amount. Here I launched a project with `MS Power BI` to visualize the modeling by providing below features:
+- Filter the source data by various dimensions while refresh the result **immediately**
+- Adjust the weights of all 3 keys on the run
+- Refresh the customer distribution in various dimensions
+- Identify the concentration rate of each customer group
+- Export the targeted customer list for further actions to be taken in Frontline; which is also the primary goal of this project: provide **direct** support with sufficient data to Frontline while reducing internal communication cost
 
-1. Numbered
-2. List
+![RFM demo](assets/images/demo_RFM.png)
 
-**Bold** and _Italic_ and `Code` text
+#### `R` `shiny` Module: Joint Plots
 
-[Link](url) and ![Image](src)
-```
+This project resembles the [`seaborn.jointplot`](http://seaborn.pydata.org/generated/seaborn.jointplot.html) using `R` language and provides below features:
+- Slices on by <em>x</em> and <em>y</em> axes, to filter on either or both
+- Enable `brushing` features provided by [`echarts4r 0.4.1`](https://echarts4r.john-coene.com/)
+- Customize colors for 3 sub-charts respectively
+- Provides the function to export the snapshot as a standalone `html file` of the interaction result, for offline sharing; while the template can also be customized using `R markdown`
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+![Joint Plot demo](assets/images/demo_UM_JointPlots.png)
 
-### Jekyll Themes
+### Contact
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/GrilledRobin/GrilledRobin.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+:iphone: **+86-137-7435-7860**  
+:email: r.b.lucas@hotmail.com
