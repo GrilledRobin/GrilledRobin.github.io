@@ -54,6 +54,7 @@ This project is to visualize the fund prices along the timeline with below featu
 - When hovering the mouse on the symbol, show a tooltip with the whole history of price change for the same fund
 - Within the tooltip, add buttons to control the zooming, resembling most of the stock softwares
 
+<p>
 <iframe
   height=400
   width=95%
@@ -61,6 +62,7 @@ This project is to visualize the fund prices along the timeline with below featu
   frameborder=0
   allowfullscreen>
 </iframe>
+</p>
 
 #### `R` `shiny` Module: Joint Plots
 
