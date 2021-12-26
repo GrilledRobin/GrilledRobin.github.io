@@ -53,16 +53,9 @@ This project is to visualize the fund prices along the timeline with below featu
 - The color of the `Capsule` chart can be differentiated out of a model, depicting whether the fund is worth investing at present on certain hypothesis
 - When hovering the mouse on the symbol, show a tooltip with the whole history of price change for the same fund
 - Within the tooltip, add buttons to control the zooming, resembling most of the stock softwares
+- It is regretful `GitHub` does not allow embedding other webpages, please visit [`here`](https://grilledrobin.shinyapps.io/fundprice/) to try the App.
 
-<p>
-<iframe
-  height=400
-  width=95%
-  src="https://grilledrobin.shinyapps.io/fundprice/"
-  frameborder=0
-  allowfullscreen>
-</iframe>
-</p>
+![Fund Price](assets/images/demo_FundPrice.png)
 
 #### `R` `shiny` Module: Joint Plots
 
