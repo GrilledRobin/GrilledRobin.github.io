@@ -17,7 +17,11 @@
 
 ### News
 
-- [ ] `2021-11-28` Setup my personal homepage
+- [x] `2021-12-26` Launch online app to demonstrate the usage of `Capsule` chart and the function to draw another `echarts` within the tooltip of an existing `echarts`
+- [x] `2021-12-12` Add function `echarts4r_Capsule` \([`R` version](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/Visualization/echarts4r_Capsule.r) \) to create multiple Capsule charts at the same time, displaying min/max/current values for the same categories respectively, which is useful visualizing fund prices within time series data.
+- [x] `2021-12-08` Add helper functions `as.character.htmlwidget` \([`R` version](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/Visualization/as.character.htmlwidget.r) \), `add_datatable_render_code` \([`R` version](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/Visualization/add_datatable_render_code.r) \), `add_deps` \([`R` version](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/Visualization/add_deps.r) \) to enable drawing inline html widgets, often as charts, inside the cells of `JQuery` `datatables`. They are especially useful for `R`:`shiny` applications powered by `DT` package.
+- [x] `2021-12-04` Slightly improve the efficiency and readability in functions `intnx` \([`R` version](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/Dates/intnx.r), [`Python` version](https://github.com/GrilledRobin/omni-series/blob/master/Python/omniPy/Dates/intnx.py) \) and `intck` \([`R` version](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/Dates/intck.r), [`Python` version](https://github.com/GrilledRobin/omni-series/blob/master/Python/omniPy/Dates/intck.py) \) in the sub-module `Dates` of both [`R` branch](https://github.com/GrilledRobin/omni-series/tree/master/R/omniR) and [`Python` branch](https://github.com/GrilledRobin/omni-series/tree/master/Python/omniPy).
+- [x] `2021-11-28` Setup my personal homepage
 - [ ] `2021-11-28` Upgrade `shiny` module [`UM_custPortMgmt`](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/UsrShinyModules/Ops/UM_custPortMgmt.r) to support `R 4.1.1` and [`echarts4r 0.4.1`](https://echarts4r.john-coene.com/)
 - [x] `2021-11-26` Add function [`setForegroundWindow`](https://github.com/GrilledRobin/omni-series/blob/master/Python/omniPy/RPA/setForegroundWindow.py) to set the dedicated window to the fore-ground in the sub-module `RPA` of [`Python` branch](https://github.com/GrilledRobin/omni-series/tree/master/Python/omniPy).
 - [x] `2021-11-23` Correct the datetime part in functions `intnx` \([`R` version](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/Dates/intnx.r), [`Python` version](https://github.com/GrilledRobin/omni-series/blob/master/Python/omniPy/Dates/intnx.py) \) and `intck` \([`R` version](https://github.com/GrilledRobin/omni-series/blob/master/R/omniR/Dates/intck.r), [`Python` version](https://github.com/GrilledRobin/omni-series/blob/master/Python/omniPy/Dates/intck.py) \) in the sub-module `Dates` of both [`R` branch](https://github.com/GrilledRobin/omni-series/tree/master/R/omniR) and [`Python` branch](https://github.com/GrilledRobin/omni-series/tree/master/Python/omniPy).
@@ -39,6 +43,24 @@ Some of my projects are demonstrated in this section
 - Export the targeted customer list for further actions to be taken in Frontline; which is also the primary goal of this project: provide **direct** support with sufficient data to Frontline while reducing internal communication cost
 
 ![RFM demo](assets/images/demo_RFM.png)
+
+#### `R` `echarts4r` package application: Fund Price
+
+This project is to visualize the fund prices along the timeline with below features:
+- Show inline `echarts` within `DT::datatable`
+- Draw another `echarts` object within the tooltip of an existing `echarts` object
+- Design a `Capsule` chart for each fund, showing the minimum and maximum prices among all historical data on a bar, with a symbol representing the position of the latest price between them
+- The color of the `Capsule` chart can be differentiated out of a model, depicting whether the fund is worth investing at present on certain hypothesis
+- When hovering the mouse on the symbol, show a tooltip with the whole history of price change for the same fund
+- Within the tooltip, add buttons to control the zooming, resembling most of the stock softwares
+
+<iframe
+	height=400
+	width=95%
+	src="https://grilledrobin.shinyapps.io/fundprice/"
+	frameborder=0
+	allowfullscreen
+></iframe>
 
 #### `R` `shiny` Module: Joint Plots
 
